@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<title>Imágenes con paralaje</title>
+	
+	<script>document.documentElement.className = 'js';</script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	
+	<link rel="stylesheet" type="text/css" href="css/template.min.css">
+	<link rel="stylesheet" type="text/css" href="css/template.theme.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/site.layout.css">
+	<link rel="stylesheet" type="text/css" href="css/docs.classes.css">
+	
+	<link rel="stylesheet" href="css/jquery.parallax.css">
+	<link rel="stylesheet" href="css/estilos.css">
+
+
+  <style type="text/css" media="screen, projection">
+    .parallax-viewport {
+      width: 800px;
+      max-width: 60em;
+      height: 300px;
+      background-color: #150c17;
+    }
+    
+    .diagram {
+      margin-top: -0.75em;
+    }
+    
+	  small {
+	    text-transform: uppercase;
+	  }
+	</style>
+</head>
+
+<body>
+<h1>El origen de las montañas</h1>
+
+	<div style="width:800px; margin:auto;"> <!-- div>class="site_wrap wrap" -->
+  
+    <div class="parallax-viewport" id="parallax">
+        
+        <!-- parallax layers -->
+        <div class="parallax-layer" style="width:2256px; height:461px;">
+            <img src="imagen/bk.png" alt="" style="position:absolute; left:0px; top:0px;"/>
+        </div>
+        <div class="parallax-layer" style="width:2256px; height:461px;">
+            <img src="imagen/sol.png" alt="">
+        </div>
+        <div class="parallax-layer" style="width:2256px; height:461px;">
+            <img src="imagen/m1.png" alt="" style="position:absolute; top:0px; left:-0px;">
+        </div>
+        <div class="parallax-layer" style="width:2256px; height:461px;">
+          <img src="imagen/m2.png" alt="" style="position:absolute; top:0px; left:-0px;">
+      </div>
+      <div class="parallax-layer" style="width:2256px; height:461px;">
+        <img src="imagen/m3.png" alt="" style="position:absolute; top:0px; left:-0px;">
+    </div>
+    <div class="parallax-layer" style="width:2256px; height:461px;">
+      <img src="imagen/m4.png" alt="" style="position:absolute; top:0px; left:-0px;">
+  </div>
+    </div>
+    
+    </div>
+
+<div class="contenedor">
+<p> 
+
+</p>
+<p>
+  Cuando el inuit siguió por vez primera al caribú hacia una tierra nueva, después de muchas estaciones, encontraron la tierra habitada. En esta tierra vivían dos tipos de gente; por un lado, la gente pequeña, que era alegre y que al agarrarlos podían cantar. Eran tan pequeños que cabían en la palma de la mano.
+</p>
+<p>
+  Por otro lado, estaban los temibles Tuniqs, que, a veces llegaban a tener 4 y 5 veces el tamaño de un inuit. A este grupo de gigantes les gustaba la guerra y trataban de capturar a los inuit, para cocinarlos y comerlos. Sin embargo, los inuit eran más listos y podían emplear su cerebro para hacerles frente.
+</p>
+<p>
+  Un día un cazador volvía a su poblado de una caza fructífera cuando fue visto por un gigante. El inuit sabía que si era atrapado por el gigante, se convertiría en su comida. El esquimal dejó caer su caribú y escapó hacia el sur, tan rápido como pudo. El tuniq le vio y corrió tras él.
+
+  Oyendo la conmoción, otro gigante miró alrededor y vio al cazador correr y él también comenzó a perseguirlo. El inuit era ágil y veloz, pero no lo suficiente como para esquivar a dos gigantes, de manera que viéndose atrapado, se detuvo y, girándose, preguntó a los gigantes: "¿Por qué me perseguís?". A lo cual cada gigante respondió: "Porque quiero que entres en mi cacerola para comerte".
+</p>
+<p>
+  El inuit más listo que los tuniqs se mostró sorprendido y contestó: "Soy sólo un esquimal endeble con poca carne y ustedes son dos enormes Tuniqs; sólo puedo servir de alimento a uno, ¿quien de los dos me comerá?".
+
+  Esto dejó perplejo a los Tuniqs, cada uno se autoproclamaba como vencedor, cada uno se atribuía el mérito de haber visto primero al inuit y se consideraba con derecho a comérselo. Finalmente, el inteligente inuit propuso una solución: "Como ambos me vieron, y sólo puedo alimentar a uno de ustedes, deben luchar entre los dos y yo mismo saltaré dentro de la cazuela del vencedor".  
+</p>
+<p>
+  Entonces tuvo lugar una de las peleas más impresionantes y más conocidas de la historia; los gigantes empezaron a luchar, lucharon durante varios días y varias noches, arrojándose de golpe al suelo, ya que ellos tenían la fuerza poderosa. Con cada golpe, la tierra se moldeaba, inclinándose y levantándose; así aparecieron valles y colinas. Pero los gigantes lucharon y lucharon, hasta que quedaron agotados y cesaron en su pelea.
+
+  Entonces el inteligente inuit, disparó a los exhaustos gigantes con sus pequeñas flechas, volvió a recuperar su caribú y regresó con su familia para darles de comer. Detrás de él quedaron los grandes montones de tierra, huella de la encarnizada lucha de los dos gigantes.
+</p>
+
+</div>
+
+
+  <script src="js/jquery1.7.2.js"></script>
+  <script src="js/jquery.event.frame.js"></script>
+  <script src="js/jquery.parallax.js"></script>
+  <script>
+  jQuery(document).ready(function(){
+    jQuery('#parallax .parallax-layer')
+    .parallax({
+      mouseport: jQuery('#parallax')
+    });
+  });
+  </script>
+</body>
+</html>
