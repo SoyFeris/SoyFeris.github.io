@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Phaser - usar teclas</title>
+    <script src="//cdn.jsdelivr.net/npm/phaser@3.24.1/dist/phaser.min.js"></script>
+</head>
+
+<body>
+    <div id="juego"></div>
+
+    <script>
+        const phaserConfig = {
+            type: Phaser.AUTO,
+            parent: "juego",
+            width: 1152,
+            height: 256,
+            backgroundColor: "#1B4F72",
+            scene: {
+                preload: precargar,
+                create: crear,
+                update: actualizar
+            }
+        };
+
+        const juego = new Phaser.Game(phaserConfig);
+
+        function precargar() { 
+            this.load.image("capa-3", "fondos/layer-3.png") ; 
+            this.load.image("capa-2", "fondos/layer-2.png") ; 
+            this.load.image("capa-1", "fondos/layer-1.png") ; 
+        }
+        
+        /*los valores de 576 y128 son la mitad de 1152 y 256*/
+        function crear() {
+            capaTres = this.add.tileSprite(576, 128, 1152, 256, "capa-3") ;
+            capaDos = this.add.tileSprite(576, 128, 1152, 256, "capa-2") ;
+            capaUno = this.add.tileSprite(576, 128, 1152, 256, "capa-1") ;
+            // Activar flechas de Teclado
+            cursores = this.input.keyboard.createCursorKeys ();
+        }
+        function actualizar() {
+            if(cursores.left.isDown){
+            capaTres.tilePositionX += 0.2;
+            capaDos.tilePositionX += 0.5;
+            capaUno.tilePositionX += 1;
+            }
+            else if(cursores.right.isDown){
+            capaTres.tilePositionX -= 0.2;
+            capaDos.tilePositionX -= 0.5;
+            capaUno.tilePositionX -= 1;
+            }
+        }
+    </script>
+</body>
+
+</html>
