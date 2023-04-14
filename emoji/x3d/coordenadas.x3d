@@ -1,0 +1,25 @@
+<x3d>
+    <scene>
+        <!-- Eje x  -->
+		<shape>
+            <appearance>
+                <material diffuseColor="red"></material>
+            </appearance>
+            <box size="6, 0.10, 0.10"></box>
+        </shape>
+<!-- Eje y  -->
+<shape>
+    <appearance>
+        <material diffuseColor="green"></material>
+    </appearance>
+    <box size="0.10, 6, 0.10"></box>
+</shape>
+<!-- Eje z  -->
+<shape>
+    <appearance>
+        <material diffuseColor="blue"></material>
+    </appearance>
+    <box size="0.10, 0.10, 6"></box>
+</shape>
+</scene>
+</x3d>
